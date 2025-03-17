@@ -1,7 +1,6 @@
-// pages/index.js
 "use client";
 import Head from 'next/head'
-import { useState } from 'react'
+import { useState, FormEvent } from 'react'
 import { 
   Card, 
   CardContent, 
@@ -27,7 +26,7 @@ export default function Home() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     // Here you would typically handle form submission
     console.log({ name, email, message })
@@ -36,6 +35,7 @@ export default function Home() {
     setEmail('')
     setMessage('')
   }
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -192,7 +192,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Отзывы блок */}
+      {/* Отзывы блок
       <section id="testimonials" className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16">Отзывы клиентов</h2>
@@ -215,7 +215,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Связаться блок */}
       <section id="contact" className="py-20">
@@ -255,7 +255,7 @@ export default function Home() {
                         id="message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        rows="5"
+                        rows={4}
                         required
                       />
                     </div>
