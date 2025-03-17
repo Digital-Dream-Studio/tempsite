@@ -67,7 +67,7 @@ export default function Home() {
             <div className="w-full md:w-1/2">
               <Card>
                 <CardContent className="p-0">
-                  <img src="/api/placeholder/600/400" alt="Наша команда" className="rounded-lg w-full" />
+                  {/* <img src="/api/placeholder/600/400" alt="Наша команда" className="rounded-lg w-full" /> */}
                 </CardContent>
               </Card>
             </div>
@@ -94,7 +94,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3, 4, 5, 6].map((item) => (
               <Card key={item} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <img src={`/api/placeholder/400/300`} alt={`Проект ${item}`} className="w-full h-64 object-cover" />
+                {/* <img src={`/api/placeholder/400/300`} alt={`Проект ${item}`} className="w-full h-64 object-cover" /> */}
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-semibold mb-2">Проект {item}</h3>
                   <div className="flex gap-2 mb-4">
